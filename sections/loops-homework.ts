@@ -1,3 +1,4 @@
+export 
 let base: number = 10;
 let limite: number = 50;
 let mult: number = 1;
