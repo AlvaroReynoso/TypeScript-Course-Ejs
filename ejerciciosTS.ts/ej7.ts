@@ -5,18 +5,20 @@
 // console.log( maxValue ); // 6 
 
 function max(a:number,b:number,c:number){
-
-    if(a>b && a>c){
-        console.log("El numero",a,"es mayor que",b,"y",c);
-    }
-    else if(b>a && b>c){
-        console.log("El numero",b,"es mayor que",a,"y",c);
-    }
-    else{
-        console.log("El numero",c,"es mayor que",a,"y",b);
-    }
     if(a==b || b==c || a==c){
         throw new Error("Alguno de los numeros proporcionados son iguales");
+    }    
+
+    if(a > b){
+        return (a > c)? a:c
     }
+    if(b > c){
+        return b;
+    }
+    else{
+        return (a > c) ? a:c
+    }
+    
 }
-max(8,7,6);
+let maxValue= max(14,15,3);
+console.log(maxValue);
